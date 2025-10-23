@@ -1,146 +1,277 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resource Guardian – Discover and block third‑party noise fast</title>
   <meta name="description" content="See every host a page loads and block third‑party trackers, ads, and risky domains—instantly. Private by design." />
   <link rel="icon" type="image/png" href="./img/icon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="./img/icon.png" alt="Resource Guardian" class="logo-icon" />
-        <span class="logo-text">Resource Guardian</span>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100">
+  <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <img src="./img/icon.png" alt="Resource Guardian" class="w-10 h-10 rounded-lg shadow-md" />
+          <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Resource Guardian</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="./index.html" class="text-slate-900 font-semibold border-b-2 border-blue-600">Home</a>
+          <a href="./privacy.html" class="text-slate-600 hover:text-slate-900 transition-colors">Privacy</a>
+          <a href="./pt/index.html" class="text-slate-600 hover:text-slate-900 transition-colors" lang="pt-BR">Português</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <nav>
-        <a href="./index.html" class="nav-link active" aria-current="page">Home</a>
-        <a href="./privacy.html" class="nav-link">Privacy</a>
-        <a href="./pt/index.html" class="nav-link" lang="pt-BR">Português</a>
-      </nav>
     </div>
-  </header>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+      <div class="px-4 py-3 space-y-2">
+        <a href="./index.html" class="block py-2 text-slate-900 font-semibold">Home</a>
+        <a href="./privacy.html" class="block py-2 text-slate-600">Privacy</a>
+        <a href="./pt/index.html" class="block py-2 text-slate-600" lang="pt-BR">Português</a>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Take Control of Your Browsing</h1>
-        <p class="hero-subtitle">
-          Instantly see all first‑ and third‑party hosts a page loads and block what you don't want with one click. No scripts or advanced setup needed. Private by design.
+  <main class="pt-16">
+    <section class="relative overflow-hidden py-20 lg:py-32">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-slate-50 opacity-70"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+      <div class="absolute bottom-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 1s;"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8 animate-fade-in-up">
+            <div class="inline-block">
+              <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">Browser Extension</span>
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight">
+              <span class="text-slate-900">Take Control</span>
+              <span class="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">of Your Browsing</span>
+            </h1>
+            <p class="text-xl text-slate-600 leading-relaxed">
+              Instantly see all first‑ and third‑party hosts a page loads and block what you don't want with one click. Private by design.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#download" class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/60 hover:scale-105 transition-all duration-300 text-center">
+                Get Extension
+                <svg class="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              <a href="#features" class="px-8 py-4 bg-white text-slate-900 rounded-xl font-semibold border-2 border-slate-200 hover:border-blue-600 hover:text-blue-600 transition-all duration-300 text-center">
+                Learn More
+              </a>
+            </div>
+          </div>
+          <div class="relative animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-20 blur-2xl"></div>
+            <img src="./img/1.jpg" alt="Resource Guardian Interface" class="relative rounded-2xl shadow-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-20 lg:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">Powerful Features</h2>
+          <p class="text-xl text-slate-600 max-w-2xl mx-auto">Everything you need to protect your privacy and take control of your web experience</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="group p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-blue-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              🛡️
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Live Host Discovery</h3>
+            <p class="text-slate-600 leading-relaxed">Real-time detection of all hosts grouped by base domain with instant visibility</p>
+          </div>
+
+          <div class="group p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-emerald-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              ⚡
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">One-Click Blocking</h3>
+            <p class="text-slate-600 leading-relaxed">Block or unblock domains and URLs instantly using Manifest V3 + DNR</p>
+          </div>
+
+          <div class="group p-8 bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-violet-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-violet-600 to-purple-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              🔍
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Advanced Filtering</h3>
+            <p class="text-slate-600 leading-relaxed">Search, filter, sort, and perform bulk actions with ease</p>
+          </div>
+
+          <div class="group p-8 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-orange-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-orange-600 to-amber-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              📋
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Export & Import</h3>
+            <p class="text-slate-600 leading-relaxed">Take your block lists with you—export and import anywhere</p>
+          </div>
+
+          <div class="group p-8 bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-red-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-red-600 to-pink-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              ⚠️
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Risk Detection</h3>
+            <p class="text-slate-600 leading-relaxed">Optional malware checks using URLhaus and StevenBlack databases</p>
+          </div>
+
+          <div class="group p-8 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-sky-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-sky-600 to-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              🌍
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Multilingual UI</h3>
+            <p class="text-slate-600 leading-relaxed">Full internationalization with RTL support for global accessibility</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-block p-3 bg-white/10 rounded-2xl backdrop-blur-sm mb-6">
+          <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        </div>
+        <h2 class="text-4xl lg:text-5xl font-extrabold mb-6">Privacy First, Always</h2>
+        <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+          We do not collect, transmit, sell, or share user data. All analysis happens locally on your device. Your browsing data stays on your machine—period.
         </p>
-        <div class="cta-buttons">
-          <a href="#download" class="btn btn-primary">Get Extension</a>
-          <a href="#features" class="btn btn-secondary">Learn More</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="./img/1.jpg" alt="Resource Guardian Interface" />
-      </div>
-    </section>
-
-    <section id="features" class="features">
-      <h2 class="section-title">Powerful Features</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <h3>Live Host Discovery</h3>
-          <p>Real-time detection of all hosts grouped by base domain with instant visibility</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>One-Click Blocking</h3>
-          <p>Block or unblock domains and URLs instantly using Manifest V3 + DNR</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔍</div>
-          <h3>Advanced Filtering</h3>
-          <p>Search, filter, sort, and perform bulk actions with ease</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📋</div>
-          <h3>Export & Import</h3>
-          <p>Take your block lists with you—export and import anywhere</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚠️</div>
-          <h3>Risk Detection</h3>
-          <p>Optional malware checks using URLhaus and StevenBlack databases</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌍</div>
-          <h3>Multilingual UI</h3>
-          <p>Full internationalization with RTL support for global accessibility</p>
-        </div>
+        <a href="./privacy.html" class="inline-flex items-center px-8 py-4 bg-white text-slate-900 rounded-xl font-semibold hover:bg-slate-100 transition-all duration-300 group">
+          Read Full Privacy Policy
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
       </div>
     </section>
 
-    <section class="privacy-highlight">
-      <div class="privacy-content">
-        <h2>Privacy First, Always</h2>
-        <p>
-          We do not collect, transmit, sell, or share user data. All analysis happens locally on your device.
-          Your browsing data stays on your machine—period.
-        </p>
-        <a href="./privacy.html" class="privacy-link">Read Full Privacy Policy →</a>
-      </div>
-    </section>
+    <section class="py-20 lg:py-32 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">Required Permissions</h2>
+          <p class="text-xl text-slate-600">Transparent about what we need and why</p>
+        </div>
 
-    <section class="permissions">
-      <h2 class="section-title">Required Permissions</h2>
-      <div class="permissions-list">
-        <div class="permission-item">
-          <div class="permission-header">
-            <span class="permission-icon">🔐</span>
-            <strong>Read and change data on all sites</strong>
+        <div class="space-y-6">
+          <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border-l-4 border-blue-600">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">
+                🔐
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Read and change data on all sites</h3>
+                <p class="text-slate-600">Required to list and block the requests you choose</p>
+              </div>
+            </div>
           </div>
-          <p>Required to list and block the requests you choose</p>
-        </div>
-        <div class="permission-item">
-          <div class="permission-header">
-            <span class="permission-icon">⚙️</span>
-            <strong>Declarative Net Request</strong>
+
+          <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border-l-4 border-emerald-600">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl">
+                ⚙️
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Declarative Net Request</h3>
+                <p class="text-slate-600">Enables dynamic blocking rules to protect your browsing</p>
+              </div>
+            </div>
           </div>
-          <p>Enables dynamic blocking rules to protect your browsing</p>
-        </div>
-        <div class="permission-item">
-          <div class="permission-header">
-            <span class="permission-icon">📊</span>
-            <strong>WebRequest (passive)</strong>
+
+          <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border-l-4 border-violet-600">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center text-2xl">
+                📊
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">WebRequest (passive)</h3>
+                <p class="text-slate-600">Measures and displays requests without intercepting traffic</p>
+              </div>
+            </div>
           </div>
-          <p>Measures and displays requests without intercepting traffic</p>
-        </div>
-        <div class="permission-item">
-          <div class="permission-header">
-            <span class="permission-icon">💾</span>
-            <strong>Storage</strong>
+
+          <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border-l-4 border-orange-600">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-2xl">
+                💾
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Storage</h3>
+                <p class="text-slate-600">Saves your local settings and block lists securely</p>
+              </div>
+            </div>
           </div>
-          <p>Saves your local settings and block lists securely</p>
         </div>
       </div>
     </section>
 
-    <section id="download" class="download">
-      <h2 class="section-title">Get Started Today</h2>
-      <div class="download-content">
-        <p>Chrome Web Store: <em>Link will be added after publication</em></p>
+    <section id="download" class="py-20 lg:py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6">Get Started Today</h2>
+        <p class="text-xl text-slate-600 mb-8">Chrome Web Store: <em>Link will be added after publication</em></p>
+        <div class="inline-flex items-center px-6 py-3 bg-slate-100 text-slate-700 rounded-xl">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Coming soon to Chrome Web Store
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="./img/icon.png" alt="Resource Guardian" class="footer-icon" />
-        <span>Resource Guardian</span>
+  <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex items-center space-x-3">
+          <img src="./img/icon.png" alt="Resource Guardian" class="w-10 h-10 rounded-lg" />
+          <span class="text-xl font-bold">Resource Guardian</span>
+        </div>
+        <p class="text-slate-400">&copy; <span id="year"></span> Resource Guardian. All rights reserved.</p>
       </div>
-      <p>&copy; <span id="year"></span> Resource Guardian. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
