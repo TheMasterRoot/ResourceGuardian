@@ -1,53 +1,174 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resource Guardian – Privacy Policy</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="We do not collect, transmit, sell, or share user data. All analysis happens locally on your device." />
+  <link rel="icon" type="image/png" href="./img/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <h1>Privacy Policy</h1>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./pt/privacidade.html" lang="pt-BR">Português</a>
-    </nav>
-  </header>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100">
+  <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <img src="./img/icon.png" alt="Resource Guardian" class="w-10 h-10 rounded-lg shadow-md" />
+          <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Resource Guardian</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="./index.html" class="text-slate-600 hover:text-slate-900 transition-colors">Home</a>
+          <a href="./privacy.html" class="text-slate-900 font-semibold border-b-2 border-blue-600">Privacy</a>
+          <a href="./pt/index.html" class="text-slate-600 hover:text-slate-900 transition-colors" lang="pt-BR">Português</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+      <div class="px-4 py-3 space-y-2">
+        <a href="./index.html" class="block py-2 text-slate-600">Home</a>
+        <a href="./privacy.html" class="block py-2 text-slate-900 font-semibold">Privacy</a>
+        <a href="./pt/index.html" class="block py-2 text-slate-600" lang="pt-BR">Português</a>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <p>Resource Guardian does not collect, transmit, sell, or share any personal or sensitive user data.</p>
+  <main class="pt-16">
+    <section class="relative overflow-hidden py-20 lg:py-32">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-slate-50 opacity-70"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+      <div class="absolute bottom-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 1s;"></div>
 
-    <h2>What the extension does locally</h2>
-    <ul>
-      <li>Observes network requests of the current site to display first‑ and third‑party hosts.</li>
-      <li>Blocks/unblocks domains and specific URLs via Chrome's Declarative Net Request API.</li>
-      <li>Stores your preferences and lists in <code>chrome.storage.local</code> only.</li>
-      <li>Optionally downloads public, keyless threat lists (URLhaus hostfile and StevenBlack hosts) and compares them locally with the current tab's hosts.</li>
-    </ul>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-block p-3 bg-white/10 rounded-2xl backdrop-blur-sm mb-6">
+          <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">Privacy Policy</h1>
+        <p class="text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto">Resource Guardian does not collect, transmit, sell, or share any personal or sensitive user data. All analysis happens locally on your device.</p>
+      </div>
+    </section>
 
-    <h2>Data sharing and transfer</h2>
-    <ul>
-      <li>No data leaves your device. Remote fetches are limited to the public lists above.</li>
-      <li>No analytics, fingerprinting, or tracking.</li>
-    </ul>
+    <section class="py-12 lg:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-200">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">What the extension does locally</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li>Observes network requests of the current site to display first‑ and third‑party hosts.</li>
+            <li>Blocks/unblocks domains and specific URLs via Chrome's Declarative Net Request API.</li>
+            <li>Stores your preferences and lists in <code class="px-1 py-0.5 bg-slate-100 rounded">chrome.storage.local</code> only.</li>
+            <li>Optionally downloads public, keyless threat lists (URLhaus hostfile and StevenBlack hosts) and compares them locally with the current tab's hosts.</li>
+          </ul>
+        </div>
 
-    <h2>Permissions rationale</h2>
-    <ul>
-      <li><strong>Host access &lt;all_urls&gt;</strong>: required to observe and block requests across sites.</li>
-      <li><strong>declarativeNetRequest</strong>: required to install dynamic blocking rules.</li>
-      <li><strong>webRequest</strong> (non‑blocking): used passively to measure and list hosts.</li>
-      <li><strong>storage</strong>: used to keep your local settings and lists.</li>
-    </ul>
+        <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-200">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Data sharing and transfer</h2>
+          <ul class="list-disc pl-6 space-y-2 text-slate-700">
+            <li>No data leaves your device. Remote fetches are limited to the public lists above.</li>
+            <li>No analytics, fingerprinting, or tracking.</li>
+          </ul>
+        </div>
 
-    <p>Contact: open an issue on the project site or the support email listed on the Chrome Web Store page.</p>
+        <div>
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Required Permissions</h2>
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl p-8 shadow-md transition-shadow border-l-4 border-blue-600">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">🔐</div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 mb-2">Host access &lt;all_urls&gt;</h3>
+                  <p class="text-slate-600">Required to observe and block the requests you choose across sites.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-md transition-shadow border-l-4 border-emerald-600">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl">⚙️</div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 mb-2">Declarative Net Request</h3>
+                  <p class="text-slate-600">Enables dynamic blocking rules to protect your browsing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-md transition-shadow border-l-4 border-violet-600">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center text-2xl">📊</div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 mb-2">WebRequest (passive)</h3>
+                  <p class="text-slate-600">Measures and displays requests without intercepting traffic.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-md transition-shadow border-l-4 border-orange-600">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-2xl">💾</div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900 mb-2">Storage</h3>
+                  <p class="text-slate-600">Saves your local settings and block lists securely.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+          <p class="text-slate-700">Contact: open an issue on the project site or the support email listed on the Chrome Web Store page.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Resource Guardian</p>
+  <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center space-y-6">
+        <div class="flex items-center space-x-3">
+          <img src="./img/icon.png" alt="Resource Guardian" class="w-10 h-10 rounded-lg" />
+          <span class="text-xl font-bold">Resource Guardian</span>
+        </div>
+        <p class="text-slate-400">&copy; <span id="year"></span> Resource Guardian. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn && mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
