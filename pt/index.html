@@ -5,64 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resource Guardian – Descubra e bloqueie ruídos de terceiros</title>
   <meta name="description" content="Veja todos os hosts que a página carrega e bloqueie trackers, anúncios e domínios de risco—instantaneamente. Privado por padrão." />
+  <link rel="icon" type="image/png" href="../img/icon.png" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <header>
-    <h1>Resource Guardian</h1>
-    <nav>
-      <a href="../index.html" lang="en">English</a>
-      <a href="./index.html" aria-current="page">Início</a>
-      <a href="./privacidade.html">Privacidade</a>
-    </nav>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../img/icon.png" alt="Resource Guardian" class="logo-icon" />
+        <span class="logo-text">Resource Guardian</span>
+      </div>
+      <nav>
+        <a href="../index.html" class="nav-link" lang="en">English</a>
+        <a href="./index.html" class="nav-link active" aria-current="page">Início</a>
+        <a href="./privacidade.html" class="nav-link">Privacidade</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Controle o que as páginas carregam</h2>
-      <p>
-        Veja instantaneamente os hosts de primeira e de terceiros que uma página carrega e bloqueie o que não quiser com um clique. Sem scripts ou configurações avançadas. Privado por padrão.
-      </p>
-      <ul>
-        <li>Descoberta em tempo real agrupada por domínio base</li>
-        <li>Bloqueio/desbloqueio com um clique (Manifest V3 + DNR) para domínios e URLs específicas</li>
-        <li>Pré‑visualização por URL com abrir/copiar</li>
-        <li>Busca, filtros, ordenação e ações em massa</li>
-        <li>Exportação/importação das suas listas</li>
-        <li>Verificações de risco (opcionais) com URLhaus (malware) e StevenBlack; auto‑bloqueio de terceiros</li>
-        <li>UI internacionalizada com vários idiomas e suporte a RTL</li>
-        <li>Sem coleta de dados; todo processamento é local</li>
-      </ul>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Assuma o Controle da Sua Navegação</h1>
+        <p class="hero-subtitle">
+          Veja instantaneamente os hosts de primeira e de terceiros que uma página carrega e bloqueie o que não quiser com um clique. Sem scripts ou configurações avançadas. Privado por padrão.
+        </p>
+        <div class="cta-buttons">
+          <a href="#download" class="btn btn-primary">Baixar Extensão</a>
+          <a href="#features" class="btn btn-secondary">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../img/1.jpg" alt="Interface do Resource Guardian" />
+      </div>
     </section>
 
-    <section>
-      <h2>Permissões, em resumo</h2>
-      <ul>
-        <li><strong>Ler e alterar dados em todos os sites</strong>: para listar e bloquear as requisições que você escolher</li>
-        <li><strong>Declarative Net Request</strong>: para instalar regras de bloqueio dinâmicas</li>
-        <li><strong>WebRequest (passiva)</strong>: para medir e exibir requisições (não intercepta o tráfego)</li>
-        <li><strong>Storage</strong>: para salvar suas preferências e listas locais</li>
-      </ul>
+    <section id="features" class="features">
+      <h2 class="section-title">Recursos Poderosos</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Descoberta em Tempo Real</h3>
+          <p>Detecção em tempo real de todos os hosts agrupados por domínio base com visibilidade instantânea</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Bloqueio com Um Clique</h3>
+          <p>Bloqueie ou desbloqueie domínios e URLs instantaneamente usando Manifest V3 + DNR</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Filtragem Avançada</h3>
+          <p>Pesquise, filtre, ordene e realize ações em massa com facilidade</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Exportar e Importar</h3>
+          <p>Leve suas listas de bloqueio com você—exporte e importe em qualquer lugar</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚠️</div>
+          <h3>Detecção de Riscos</h3>
+          <p>Verificações opcionais de malware usando bancos de dados URLhaus e StevenBlack</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Interface Multilíngue</h3>
+          <p>Internacionalização completa com suporte a RTL para acessibilidade global</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Privacidade</h2>
-      <p>
-        Não coletamos, transmitimos, vendemos ou compartilhamos dados do usuário. Toda a análise ocorre localmente no seu dispositivo.
-        Veja a <a href="./privacidade.html">Política de Privacidade</a> para detalhes.
-      </p>
+    <section class="privacy-highlight">
+      <div class="privacy-content">
+        <h2>Privacidade Sempre em Primeiro Lugar</h2>
+        <p>
+          Não coletamos, transmitimos, vendemos ou compartilhamos dados do usuário. Toda a análise ocorre localmente no seu dispositivo.
+          Seus dados de navegação permanecem na sua máquina—ponto final.
+        </p>
+        <a href="./privacidade.html" class="privacy-link">Ler Política de Privacidade Completa →</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Baixar a extensão</h2>
-      <p>
-        Chrome Web Store: <em>o link será adicionado após a publicação</em>.
-      </p>
+    <section class="permissions">
+      <h2 class="section-title">Permissões Necessárias</h2>
+      <div class="permissions-list">
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">🔐</span>
+            <strong>Ler e alterar dados em todos os sites</strong>
+          </div>
+          <p>Necessário para listar e bloquear as requisições que você escolher</p>
+        </div>
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">⚙️</span>
+            <strong>Declarative Net Request</strong>
+          </div>
+          <p>Permite regras de bloqueio dinâmicas para proteger sua navegação</p>
+        </div>
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">📊</span>
+            <strong>WebRequest (passiva)</strong>
+          </div>
+          <p>Mede e exibe requisições sem interceptar o tráfego</p>
+        </div>
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">💾</span>
+            <strong>Storage</strong>
+          </div>
+          <p>Salva suas configurações e listas de bloqueio localmente com segurança</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download">
+      <h2 class="section-title">Comece Hoje</h2>
+      <div class="download-content">
+        <p>Chrome Web Store: <em>O link será adicionado após a publicação</em></p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Resource Guardian</p>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="../img/icon.png" alt="Resource Guardian" class="footer-icon" />
+        <span>Resource Guardian</span>
+      </div>
+      <p>&copy; <span id="year"></span> Resource Guardian. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <script>

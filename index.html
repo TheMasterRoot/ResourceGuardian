@@ -5,64 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resource Guardian – Discover and block third‑party noise fast</title>
   <meta name="description" content="See every host a page loads and block third‑party trackers, ads, and risky domains—instantly. Private by design." />
+  <link rel="icon" type="image/png" href="./img/icon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Resource Guardian</h1>
-    <nav>
-      <a href="./index.html" aria-current="page">Home</a>
-      <a href="./privacy.html">Privacy</a>
-      <a href="./pt/index.html" lang="pt-BR">Português</a>
-    </nav>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./img/icon.png" alt="Resource Guardian" class="logo-icon" />
+        <span class="logo-text">Resource Guardian</span>
+      </div>
+      <nav>
+        <a href="./index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="./privacy.html" class="nav-link">Privacy</a>
+        <a href="./pt/index.html" class="nav-link" lang="pt-BR">Português</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Control what pages load</h2>
-      <p>
-        Instantly see all first‑ and third‑party hosts a page loads and block what you don’t want with one click. No scripts or advanced setup needed. Private by design.
-      </p>
-      <ul>
-        <li>Live host discovery grouped by base domain</li>
-        <li>One‑click block/unblock for domains and specific URLs (Manifest V3 + DNR)</li>
-        <li>Per‑URL preview with open/copy tools</li>
-        <li>Search, filters, sorting, and bulk actions</li>
-        <li>Export/import your block lists</li>
-        <li>Optional risk checks using URLhaus (malware) and StevenBlack; third‑party auto‑block</li>
-        <li>Internationalized UI with many languages and RTL support</li>
-        <li>No data collection; all processing is local</li>
-      </ul>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Take Control of Your Browsing</h1>
+        <p class="hero-subtitle">
+          Instantly see all first‑ and third‑party hosts a page loads and block what you don't want with one click. No scripts or advanced setup needed. Private by design.
+        </p>
+        <div class="cta-buttons">
+          <a href="#download" class="btn btn-primary">Get Extension</a>
+          <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./img/1.jpg" alt="Resource Guardian Interface" />
+      </div>
     </section>
 
-    <section>
-      <h2>Permissions, briefly</h2>
-      <ul>
-        <li><strong>Read and change data on all sites</strong>: to list and block the requests you choose</li>
-        <li><strong>Declarative Net Request</strong>: to install dynamic blocking rules</li>
-        <li><strong>WebRequest (passive)</strong>: to measure and display requests (does not intercept traffic)</li>
-        <li><strong>Storage</strong>: to save your local settings and lists</li>
-      </ul>
+    <section id="features" class="features">
+      <h2 class="section-title">Powerful Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Live Host Discovery</h3>
+          <p>Real-time detection of all hosts grouped by base domain with instant visibility</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>One-Click Blocking</h3>
+          <p>Block or unblock domains and URLs instantly using Manifest V3 + DNR</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Advanced Filtering</h3>
+          <p>Search, filter, sort, and perform bulk actions with ease</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Export & Import</h3>
+          <p>Take your block lists with you—export and import anywhere</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚠️</div>
+          <h3>Risk Detection</h3>
+          <p>Optional malware checks using URLhaus and StevenBlack databases</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Multilingual UI</h3>
+          <p>Full internationalization with RTL support for global accessibility</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Privacy</h2>
-      <p>
-        We do not collect, transmit, sell, or share user data. All analysis happens locally on your device.
-        See the <a href="./privacy.html">Privacy Policy</a> for details.
-      </p>
+    <section class="privacy-highlight">
+      <div class="privacy-content">
+        <h2>Privacy First, Always</h2>
+        <p>
+          We do not collect, transmit, sell, or share user data. All analysis happens locally on your device.
+          Your browsing data stays on your machine—period.
+        </p>
+        <a href="./privacy.html" class="privacy-link">Read Full Privacy Policy →</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Get the extension</h2>
-      <p>
-        Chrome Web Store: <em>link will be added after publication</em>.
-      </p>
+    <section class="permissions">
+      <h2 class="section-title">Required Permissions</h2>
+      <div class="permissions-list">
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">🔐</span>
+            <strong>Read and change data on all sites</strong>
+          </div>
+          <p>Required to list and block the requests you choose</p>
+        </div>
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">⚙️</span>
+            <strong>Declarative Net Request</strong>
+          </div>
+          <p>Enables dynamic blocking rules to protect your browsing</p>
+        </div>
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">📊</span>
+            <strong>WebRequest (passive)</strong>
+          </div>
+          <p>Measures and displays requests without intercepting traffic</p>
+        </div>
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-icon">💾</span>
+            <strong>Storage</strong>
+          </div>
+          <p>Saves your local settings and block lists securely</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download">
+      <h2 class="section-title">Get Started Today</h2>
+      <div class="download-content">
+        <p>Chrome Web Store: <em>Link will be added after publication</em></p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Resource Guardian</p>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="./img/icon.png" alt="Resource Guardian" class="footer-icon" />
+        <span>Resource Guardian</span>
+      </div>
+      <p>&copy; <span id="year"></span> Resource Guardian. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
