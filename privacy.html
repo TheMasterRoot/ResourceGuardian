@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Guardian – Privacy Policy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy</h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./pt/privacidade.html" lang="pt-BR">Português</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Resource Guardian does not collect, transmit, sell, or share any personal or sensitive user data.</p>
+
+    <h2>What the extension does locally</h2>
+    <ul>
+      <li>Observes network requests of the current site to display first‑ and third‑party hosts.</li>
+      <li>Blocks/unblocks domains and specific URLs via Chrome's Declarative Net Request API.</li>
+      <li>Stores your preferences and lists in <code>chrome.storage.local</code> only.</li>
+      <li>Optionally downloads public, keyless threat lists (URLhaus hostfile and StevenBlack hosts) and compares them locally with the current tab's hosts.</li>
+    </ul>
+
+    <h2>Data sharing and transfer</h2>
+    <ul>
+      <li>No data leaves your device. Remote fetches are limited to the public lists above.</li>
+      <li>No analytics, fingerprinting, or tracking.</li>
+    </ul>
+
+    <h2>Permissions rationale</h2>
+    <ul>
+      <li><strong>Host access &lt;all_urls&gt;</strong>: required to observe and block requests across sites.</li>
+      <li><strong>declarativeNetRequest</strong>: required to install dynamic blocking rules.</li>
+      <li><strong>webRequest</strong> (non‑blocking): used passively to measure and list hosts.</li>
+      <li><strong>storage</strong>: used to keep your local settings and lists.</li>
+    </ul>
+
+    <p>Contact: open an issue on the project site or the support email listed on the Chrome Web Store page.</p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Resource Guardian</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

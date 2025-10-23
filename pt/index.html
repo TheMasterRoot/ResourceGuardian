@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Guardian – Descubra e bloqueie ruídos de terceiros</title>
+  <meta name="description" content="Veja todos os hosts que a página carrega e bloqueie trackers, anúncios e domínios de risco—instantaneamente. Privado por padrão." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>Resource Guardian</h1>
+    <nav>
+      <a href="../index.html" lang="en">English</a>
+      <a href="./index.html" aria-current="page">Início</a>
+      <a href="./privacidade.html">Privacidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Controle o que as páginas carregam</h2>
+      <p>
+        Veja instantaneamente os hosts de primeira e de terceiros que uma página carrega e bloqueie o que não quiser com um clique. Sem scripts ou configurações avançadas. Privado por padrão.
+      </p>
+      <ul>
+        <li>Descoberta em tempo real agrupada por domínio base</li>
+        <li>Bloqueio/desbloqueio com um clique (Manifest V3 + DNR) para domínios e URLs específicas</li>
+        <li>Pré‑visualização por URL com abrir/copiar</li>
+        <li>Busca, filtros, ordenação e ações em massa</li>
+        <li>Exportação/importação das suas listas</li>
+        <li>Verificações de risco (opcionais) com URLhaus (malware) e StevenBlack; auto‑bloqueio de terceiros</li>
+        <li>UI internacionalizada com vários idiomas e suporte a RTL</li>
+        <li>Sem coleta de dados; todo processamento é local</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Permissões, em resumo</h2>
+      <ul>
+        <li><strong>Ler e alterar dados em todos os sites</strong>: para listar e bloquear as requisições que você escolher</li>
+        <li><strong>Declarative Net Request</strong>: para instalar regras de bloqueio dinâmicas</li>
+        <li><strong>WebRequest (passiva)</strong>: para medir e exibir requisições (não intercepta o tráfego)</li>
+        <li><strong>Storage</strong>: para salvar suas preferências e listas locais</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacidade</h2>
+      <p>
+        Não coletamos, transmitimos, vendemos ou compartilhamos dados do usuário. Toda a análise ocorre localmente no seu dispositivo.
+        Veja a <a href="./privacidade.html">Política de Privacidade</a> para detalhes.
+      </p>
+    </section>
+
+    <section>
+      <h2>Baixar a extensão</h2>
+      <p>
+        Chrome Web Store: <em>o link será adicionado após a publicação</em>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Resource Guardian</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

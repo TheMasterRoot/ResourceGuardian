@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Guardian – Política de Privacidade</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1>Política de Privacidade</h1>
+    <nav>
+      <a href="../index.html" lang="en">English</a>
+      <a href="./index.html">Início</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>O Resource Guardian não coleta, transmite, vende ou compartilha quaisquer dados pessoais ou sensíveis do usuário.</p>
+
+    <h2>O que a extensão faz localmente</h2>
+    <ul>
+      <li>Observa as requisições de rede do site atual para exibir hosts de primeira e de terceiros.</li>
+      <li>Bloqueia/desbloqueia domínios e URLs específicas via API Declarative Net Request do Chrome.</li>
+      <li>Armazena suas preferências e listas apenas em <code>chrome.storage.local</code>.</li>
+      <li>Opcionalmente baixa listas públicas e sem chave (URLhaus hostfile e hosts do StevenBlack) e compara localmente com os hosts da aba atual.</li>
+    </ul>
+
+    <h2>Compartilhamento e transferência de dados</h2>
+    <ul>
+      <li>Nenhum dado sai do seu dispositivo. As buscas remotas se limitam às listas públicas acima.</li>
+      <li>Sem analytics, fingerprinting ou rastreamento.</li>
+    </ul>
+
+    <h2>Justificativa de permissões</h2>
+    <ul>
+      <li><strong>Acesso a &lt;all_urls&gt;</strong>: necessário para observar e bloquear requisições em sites.</li>
+      <li><strong>declarativeNetRequest</strong>: necessário para instalar regras de bloqueio dinâmicas.</li>
+      <li><strong>webRequest</strong> (não bloqueante): usada de forma passiva para medir e listar hosts.</li>
+      <li><strong>storage</strong>: usado para manter suas configurações e listas locais.</li>
+    </ul>
+
+    <p>Contato: abra uma issue no site do projeto ou use o e‑mail de suporte informado na página da Chrome Web Store.</p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Resource Guardian</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

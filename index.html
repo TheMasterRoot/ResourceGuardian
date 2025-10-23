@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Guardian – Discover and block third‑party noise fast</title>
+  <meta name="description" content="See every host a page loads and block third‑party trackers, ads, and risky domains—instantly. Private by design." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Resource Guardian</h1>
+    <nav>
+      <a href="./index.html" aria-current="page">Home</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./pt/index.html" lang="pt-BR">Português</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Control what pages load</h2>
+      <p>
+        Instantly see all first‑ and third‑party hosts a page loads and block what you don’t want with one click. No scripts or advanced setup needed. Private by design.
+      </p>
+      <ul>
+        <li>Live host discovery grouped by base domain</li>
+        <li>One‑click block/unblock for domains and specific URLs (Manifest V3 + DNR)</li>
+        <li>Per‑URL preview with open/copy tools</li>
+        <li>Search, filters, sorting, and bulk actions</li>
+        <li>Export/import your block lists</li>
+        <li>Optional risk checks using URLhaus (malware) and StevenBlack; third‑party auto‑block</li>
+        <li>Internationalized UI with many languages and RTL support</li>
+        <li>No data collection; all processing is local</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Permissions, briefly</h2>
+      <ul>
+        <li><strong>Read and change data on all sites</strong>: to list and block the requests you choose</li>
+        <li><strong>Declarative Net Request</strong>: to install dynamic blocking rules</li>
+        <li><strong>WebRequest (passive)</strong>: to measure and display requests (does not intercept traffic)</li>
+        <li><strong>Storage</strong>: to save your local settings and lists</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>
+        We do not collect, transmit, sell, or share user data. All analysis happens locally on your device.
+        See the <a href="./privacy.html">Privacy Policy</a> for details.
+      </p>
+    </section>
+
+    <section>
+      <h2>Get the extension</h2>
+      <p>
+        Chrome Web Store: <em>link will be added after publication</em>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Resource Guardian</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
